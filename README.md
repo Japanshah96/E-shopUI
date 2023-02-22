@@ -1,6 +1,6 @@
 # e_shop
 
-A new Flutter project.
+A new Flutter project [ Shopping App UI].
 
 ## Getting Started
 
