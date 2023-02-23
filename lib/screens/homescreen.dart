@@ -32,7 +32,6 @@ class HomePage extends StatelessWidget {
           activeColor: Colors.black,
           tabBackgroundColor: Colors.grey.withOpacity(0.3),
           padding: EdgeInsets.all(18),
-          tabActiveBorder: Border(bottom: BorderSide.none),
           onTabChange: (value) {
             controller.tabidex.value = value;
           },
