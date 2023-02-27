@@ -6,6 +6,7 @@ import 'package:e_shop/screens/favourites.dart';
 import 'package:e_shop/screens/gift.dart';
 import 'package:e_shop/screens/homescreen.dart';
 import 'package:e_shop/screens/login.dart';
+import 'package:e_shop/screens/orders.dart';
 import 'package:e_shop/screens/payment.dart';
 import 'package:e_shop/screens/product_info.dart';
 import 'package:e_shop/screens/products.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/addaddress', page: () => AddAddress()),
         GetPage(name: '/setting', page: () => const Settings()),
         GetPage(name: '/password', page: () => const UpdatePassword()),
+        GetPage(name: '/orders', page: () => const OrderScr()),
       ],
       // theme: ThemeData,
       home: const SplashScreen(),

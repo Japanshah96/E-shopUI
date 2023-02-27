@@ -15,9 +15,13 @@ class SplashScreen extends StatelessWidget {
           Get.toNamed('/login');
         },
         child: Container(
+          // decoration: BoxDecoration(),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: Image.asset('assets/images/cart.jpg'),
+          child: Image.asset(
+            'assets/images/cart.jpg',
+            fit: BoxFit.fill,
+          ),
         ),
       ),
     );

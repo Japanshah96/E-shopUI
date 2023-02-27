@@ -25,51 +25,61 @@ class HomePage extends StatelessWidget {
           // ),
 
           Obx(
-        () => GNav(
-          gap: 8,
-          backgroundColor: Colors.blue.withOpacity(0.3),
-          color: Colors.black,
-          activeColor: Colors.black,
-          tabBackgroundColor: Colors.grey.withOpacity(0.3),
-          padding: EdgeInsets.all(18),
-          onTabChange: (value) {
-            controller.tabidex.value = value;
-          },
-          tabs: [
-            GButton(
-              iconColor:
-                  controller.tabidex.value == 0 ? Colors.black : Colors.black,
-              icon: Icons.home_rounded,
-              // onPressed: (value) {
-              //   controller.tabidex.value = value;
-              // },
-              text: 'Home',
+        () => Container(
+          color: Colors.blue.shade100,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
+            child: GNav(
+              gap: 8,
+              backgroundColor: Colors.blue.shade100,
+              color: Colors.black,
+              activeColor: Colors.blue[700],
+              tabBackgroundColor: Colors.white,
+              padding: EdgeInsets.all(16),
+              onTabChange: (value) {
+                controller.tabidex.value = value;
+              },
+              tabs: [
+                GButton(
+                  iconColor: controller.tabidex.value == 0
+                      ? Colors.black
+                      : Colors.black,
+                  icon: Icons.home_rounded,
+                  // onPressed: (value) {
+                  //   controller.tabidex.value = value;
+                  // },
+                  text: 'Home',
+                ),
+                GButton(
+                    iconColor: controller.tabidex.value == 1
+                        ? Colors.black
+                        : Colors.black,
+                    icon: Icons.favorite,
+                    // onPressed: (value) {
+                    //   controller.tabidex.value = value;
+                    // },
+                    text: 'Favourites'),
+                GButton(
+                    iconColor: controller.tabidex.value == 2
+                        ? Colors.black
+                        : Colors.black,
+                    icon: Icons.shopping_cart,
+                    // onPressed: (value) {
+                    //   controller.tabidex.value = value;
+                    // },
+                    text: 'Add to Cart'),
+                GButton(
+                    iconColor: controller.tabidex.value == 3
+                        ? Colors.black
+                        : Colors.black,
+                    icon: Icons.person,
+                    // onPressed: (value) {
+                    //   controller.tabidex.value = value;
+                    // },
+                    text: 'Profile'),
+              ],
             ),
-            GButton(
-                iconColor:
-                    controller.tabidex.value == 1 ? Colors.black : Colors.black,
-                icon: Icons.favorite,
-                // onPressed: (value) {
-                //   controller.tabidex.value = value;
-                // },
-                text: 'Favourites'),
-            GButton(
-                iconColor:
-                    controller.tabidex.value == 2 ? Colors.black : Colors.black,
-                icon: Icons.shopping_cart,
-                // onPressed: (value) {
-                //   controller.tabidex.value = value;
-                // },
-                text: 'Add to Cart'),
-            GButton(
-                iconColor:
-                    controller.tabidex.value == 3 ? Colors.black : Colors.black,
-                icon: Icons.person,
-                // onPressed: (value) {
-                //   controller.tabidex.value = value;
-                // },
-                text: 'Profile'),
-          ],
+          ),
         ),
 
         //  BottomNavigationBar(
