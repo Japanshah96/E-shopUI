@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "388294128719",
+    "project_id": "e-shopui",
+    "storage_bucket": "e-shopui.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388294128719:android:fa76caf927a8a263c2663a",
+        "android_client_info": {
+          "package_name": "com.example.e_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388294128719-c4hb3sh3uqt4emi68d0mmmgpvfgfhsqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1KiV5fNYK1-F3AnhM9-L7chzC2SvqlNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388294128719-c4hb3sh3uqt4emi68d0mmmgpvfgfhsqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

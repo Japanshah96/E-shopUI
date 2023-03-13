@@ -1,4 +1,5 @@
 import 'package:e_shop/controller/login_controller.dart';
+import 'package:e_shop/pallete.dart';
 import 'package:e_shop/screens/cart.dart';
 import 'package:e_shop/screens/favourites.dart';
 import 'package:e_shop/screens/payment.dart';
@@ -26,12 +27,12 @@ class HomePage extends StatelessWidget {
 
           Obx(
         () => Container(
-          color: Colors.blue.shade100,
+          color: Colors.blue,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
             child: GNav(
               gap: 8,
-              backgroundColor: Colors.blue.shade100,
+              backgroundColor: Colors.blue,
               color: Colors.black,
               activeColor: Colors.blue[700],
               tabBackgroundColor: Colors.white,

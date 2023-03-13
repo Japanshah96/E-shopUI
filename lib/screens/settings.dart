@@ -1,4 +1,5 @@
 import 'package:e_shop/controller/signup_controller.dart';
+import 'package:e_shop/pallete.dart';
 import 'package:e_shop/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -17,7 +18,7 @@ class Settings extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.blue.withOpacity(0.2),
+          color: Palette.secondarycolor.withOpacity(0.2),
           child: Column(
             children: [
               Expanded(
@@ -152,14 +153,29 @@ class Settings extends StatelessWidget {
                             Container(
                                 width: 150,
                                 child: CustomButton(
-                                    buttonText: 'Update Password',
-                                    op: () {
-                                      Get.toNamed('password');
-                                    })),
+                                  buttonText: 'Update Password',
+                                  op: () {
+                                    Get.toNamed('password');
+                                  },
+                                  gradient: LinearGradient(
+                                    colors: <Color>[
+                                      Palette.buttoncolor,
+                                      Palette.secondarycolor
+                                    ],
+                                  ),
+                                )),
                             Container(
                                 width: 150,
                                 child: CustomButton(
-                                    buttonText: 'Save', op: () {})),
+                                  buttonText: 'Save',
+                                  op: () {},
+                                  gradient: LinearGradient(
+                                    colors: <Color>[
+                                      Palette.buttoncolor,
+                                      Palette.secondarycolor
+                                    ],
+                                  ),
+                                )),
                           ],
                         )
                       ],

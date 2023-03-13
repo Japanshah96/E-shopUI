@@ -1,4 +1,5 @@
 import 'package:e_shop/controller/login_controller.dart';
+import 'package:e_shop/pallete.dart';
 import 'package:e_shop/screens/login.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class PaymentPage extends StatelessWidget {
         Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.blue.withOpacity(0.2),
+          color: Palette.secondarycolor.withOpacity(0.2),
           child: Column(children: [
             Expanded(
               child: Container(
@@ -155,30 +156,36 @@ class PaymentPage extends StatelessWidget {
                                 height: 20,
                               ),
                               CustomButton(
-                                  buttonText: 'Buy Now',
-                                  op: () {
-                                    Get.dialog(Dialog(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(15)),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Image.asset(
-                                              'assets/images/smile.jpg'),
-                                          SizedBox(
-                                            height: 20,
-                                          ),
-                                          Text(
-                                            'Your order has been placed sucessfully.',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ],
-                                      ),
-                                    ));
-                                  }),
+                                buttonText: 'Buy Now',
+                                op: () {
+                                  Get.dialog(Dialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Image.asset('assets/images/smile.jpg'),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Text(
+                                          'Your order has been placed sucessfully.',
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ));
+                                },
+                                gradient: LinearGradient(
+                                  colors: <Color>[
+                                    Palette.buttoncolor,
+                                    Palette.secondarycolor
+                                  ],
+                                ),
+                              ),
                               // Row(
                               //   children: [
                               //     Column(

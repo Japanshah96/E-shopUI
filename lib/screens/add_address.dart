@@ -1,4 +1,5 @@
 import 'package:e_shop/controller/address_controller.dart';
+import 'package:e_shop/pallete.dart';
 import 'package:e_shop/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -16,7 +17,7 @@ class AddAddress extends StatelessWidget {
         body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.blue.withOpacity(0.2),
+          color: Palette.secondarycolor.withOpacity(0.2),
           child: Column(
             children: [
               Expanded(
@@ -129,21 +130,28 @@ class AddAddress extends StatelessWidget {
                           ),
                           // Spacer(),
                           CustomButton(
-                              buttonText: 'Save',
-                              op: () {
-                                addaddresscontroller.country.add(
-                                    addaddresscontroller.nameCountry.value);
-                                addaddresscontroller.addresses.add(
-                                    addaddresscontroller.nameAddress.value);
-                                addaddresscontroller.number
-                                    .add(addaddresscontroller.nameNumber.value);
-                                print(addaddresscontroller.country.toString());
+                            buttonText: 'Save',
+                            op: () {
+                              addaddresscontroller.country
+                                  .add(addaddresscontroller.nameCountry.value);
+                              addaddresscontroller.addresses
+                                  .add(addaddresscontroller.nameAddress.value);
+                              addaddresscontroller.number
+                                  .add(addaddresscontroller.nameNumber.value);
+                              print(addaddresscontroller.country.toString());
 
-                                Get.back();
-                                addaddresscontroller.nameCountry.value = '';
-                                addaddresscontroller.nameAddress.value = '';
-                                addaddresscontroller.nameNumber.value = '';
-                              }),
+                              Get.back();
+                              addaddresscontroller.nameCountry.value = '';
+                              addaddresscontroller.nameAddress.value = '';
+                              addaddresscontroller.nameNumber.value = '';
+                            },
+                            gradient: LinearGradient(
+                              colors: <Color>[
+                                Palette.buttoncolor,
+                                Palette.secondarycolor
+                              ],
+                            ),
+                          ),
                           // Spacer(),
                           // SizedBox(
                           //   height: 10,
