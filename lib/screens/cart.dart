@@ -1,5 +1,6 @@
 import 'package:e_shop/controller/favourites_controller.dart';
 import 'package:e_shop/controller/login_controller.dart';
+import 'package:e_shop/pallete.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -48,7 +49,7 @@ class Cart extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              color: Colors.blue.withOpacity(0.2),
+              color: Palette.secondarycolor.withOpacity(0.2),
               child: Column(
                 children: [
                   Expanded(
@@ -192,21 +193,32 @@ class Cart extends StatelessWidget {
                                   height: 120,
                                   width: MediaQuery.of(context).size.width,
                                   decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Palette.secondarycolor),
                                     color: Colors.blue[50],
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: Row(
                                     children: [
                                       Expanded(
-                                        child: ClipRRect(
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(15),
-                                              bottomLeft: Radius.circular(15)),
-                                          child: Image.asset(
-                                            cartController.photos.value[
-                                                atcController.atc[index]],
-                                            fit: BoxFit.fill,
-                                            height: 120,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(15),
+                                                bottomLeft:
+                                                    Radius.circular(15)),
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(15),
+                                                bottomLeft:
+                                                    Radius.circular(15)),
+                                            child: Image.network(
+                                              cartController.photos.value[
+                                                  atcController.atc[index]],
+                                              fit: BoxFit.fill,
+                                              height: 120,
+                                            ),
                                           ),
                                         ),
                                       ),

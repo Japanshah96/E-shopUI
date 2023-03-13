@@ -1,3 +1,4 @@
+import 'package:e_shop/pallete.dart';
 import 'package:e_shop/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -17,7 +18,7 @@ class VerifyScr extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.blue.withOpacity(0.2),
+          color: Palette.secondarycolor.withOpacity(0.2),
           child: Column(
             children: [
               Expanded(
@@ -65,6 +66,8 @@ class VerifyScr extends StatelessWidget {
                               Expanded(
                                   child: OTPTextField(
                                 length: 4,
+                                otpFieldStyle: OtpFieldStyle(
+                                    borderColor: Palette.buttoncolor),
                                 width: MediaQuery.of(context).size.width,
                                 textFieldAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -129,7 +132,7 @@ class VerifyScr extends StatelessWidget {
                               Text(
                                 'Recieve Code',
                                 style: TextStyle(
-                                    color: Colors.amber,
+                                    color: Palette.buttoncolor,
                                     fontWeight: FontWeight.bold),
                               )
                             ],
@@ -140,6 +143,12 @@ class VerifyScr extends StatelessWidget {
                             op: () {
                               Get.toNamed('/homescreen');
                             },
+                            gradient: LinearGradient(
+                              colors: <Color>[
+                                Palette.buttoncolor,
+                                Palette.secondarycolor
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -159,7 +168,7 @@ class VerifyScr extends StatelessWidget {
                                   border:
                                       Border.all(width: 8, color: Colors.white),
                                   shape: BoxShape.circle,
-                                  color: Colors.blue[700]),
+                                  color: Colors.white),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Icon(Icons.person, size: 65),

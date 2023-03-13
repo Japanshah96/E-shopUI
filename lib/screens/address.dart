@@ -1,4 +1,5 @@
 import 'package:e_shop/controller/address_controller.dart';
+import 'package:e_shop/pallete.dart';
 import 'package:e_shop/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -16,7 +17,7 @@ class Address extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.blue.withOpacity(0.2),
+          color: Palette.secondarycolor.withOpacity(0.2),
           child: Column(
             children: [
               Expanded(
@@ -102,10 +103,17 @@ class Address extends StatelessWidget {
                         ),
                         Spacer(),
                         CustomButton(
-                            buttonText: 'Add Address',
-                            op: () {
-                              Get.toNamed('addaddress');
-                            }),
+                          buttonText: 'Add Address',
+                          op: () {
+                            Get.toNamed('addaddress');
+                          },
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Palette.buttoncolor,
+                              Palette.secondarycolor
+                            ],
+                          ),
+                        ),
                         SizedBox(
                           height: 50,
                         )
